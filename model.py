@@ -14,7 +14,7 @@ def get_I1(pars, t):
 
 def dynamics(X, t, pars):
    I1=get_I1(pars, t)
-   dX1 = -pars['s12_1']*I1*X+(pars['k2']+pars["s21_2"]*pars["I2"])*(pars["X_tot"]-X)
+   dX1 = -pars['s12_1']*I1*X+pars['k2']*(pars["X_tot"]-X)
    return dX1
 
 def get_stat(pars):
